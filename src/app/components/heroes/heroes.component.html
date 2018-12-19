@@ -1,0 +1,40 @@
+<div class="container">
+
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="title">My Heroes</h2>
+      <div *ngFor="let hero of heroes" (click)="selectedHero(hero)">
+        <h2 class="pointer-click" [class.selected]="hero == selectedUniqueHero">{{ hero.name }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedUniqueHero != undefined" class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="col-12">
+          <br>
+          <div>
+            <h2>
+              {{selectedUniqueHero.name | uppercase}}
+            </h2>
+            <span>
+              ID: {{selectedUniqueHero.id}}
+            </span>
+          </div>
+          <div>
+            <br>
+            <label for="">Name</label>
+            <input [(ngModel)]="selectedUniqueHero.name" type="text" class="form-control">
+            <br>
+            <button (click)="onSave()" class="btn float-right">Salvar</button>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+</div>
