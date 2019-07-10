@@ -1,7 +1,29 @@
 .title {
-  color: red;
+    color: #E71D36;
+}
+
+.card {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hero-id {
+    color: #fff;
+    background: #E71D36;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.selected-id {
+    background: #3066BE !important;
 }
 
 .selected {
-  color: red !important;
+    color: #3066BE !important;
+    font-weight: bold;
+}
+
+.card-details {
+    border: none;
 }
