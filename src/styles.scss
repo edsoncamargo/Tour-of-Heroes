@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+}
+
 .blue {
     color: #fff;
     background: #3066BE;
@@ -10,4 +17,36 @@
 
 .pointer-click {
     cursor: pointer;
+}
+
+.title {
+    color: #E71D36;
+}
+
+.card {
+    width: 100%;
+    margin-top: 10px;
+
+    .id {
+        padding: 10px;
+        background-color: #3066BE;
+        color: #fff;
+        margin-right: 25px;
+    }
+
+    .name {
+        align-self: center;
+    }
+}
+
+.pd10 {
+    padding: 10px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mt25 {
+    margin-top: 25px;
 }

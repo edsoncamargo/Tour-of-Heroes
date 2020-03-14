@@ -1,11 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12 text-center">
-      <h3>MY HEROES</h3>
+      <h3>TOP HEROES</h3>
     </div>
-    <div *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}" (click)="onSelectHero(hero)"
-      class="card pointer-click">
-      <div class="row">
+    <div *ngFor="let hero of heroes" class="card pointer-click">
+      <div class="row" routerLink="/detail/{{hero.id}}">
         <div class="col-12 d-flex">
           <div class="id">
             <span> {{ hero.id }}</span>

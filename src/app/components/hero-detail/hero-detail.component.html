@@ -1,23 +1,18 @@
-<br>
-<div *ngIf="hero" class="card card-details col-12">
-  <br>
-  <div>
-    <h3 class="font-blue">
-      DETAILS
-    </h3>
-    <h4>
-      {{ hero.name | uppercase }}
-    </h4>
-    <span>
-      ID: {{hero.id}}
-    </span>
-  </div>
-  <div>
-    <br>
-    <label for="">Name</label>
-    <input [(ngModel)]="hero.name" type="text" class="form-control">
-    <br>
-    <button (click)="onSave()" class="btn blue float-right">SALVAR</button>
-    <br><br>
+<div *ngIf="hero" class=" container">
+  <div class="row">
+    <div class="card pd10">
+      <h2 class="mb25">
+        Details
+      </h2>
+      <h4>
+        {{ hero.name | uppercase }}
+      </h4>
+      <span>
+        ID: {{hero.id}}
+      </span>
+      <label for="">Name</label>
+      <input [(ngModel)]="hero.name" type="text" class="form-control" placeholder="Hero name">
+      <button (click)="onBack()" class="btn blue mt25">GO BACK</button>
+    </div>
   </div>
 </div>
