@@ -13,6 +13,7 @@
       <label for="">Name</label>
       <input [(ngModel)]="hero.name" type="text" class="form-control" placeholder="Hero name">
       <button (click)="onBack()" class="btn blue mt25">GO BACK</button>
+      <button (click)="save()" class="btn blue mt25">SAVE {{  hero.name | uppercase }}</button>
     </div>
   </div>
 </div>

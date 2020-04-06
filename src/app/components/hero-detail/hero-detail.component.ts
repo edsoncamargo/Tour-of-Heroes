@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
-// Models
 import { Hero } from './../../models/hero';
 import { HeroService } from './../../services/hero/hero.service';
 import { Location } from '@angular/common';
+
+// Models
+
+
+
 
 @Component({
   selector: 'app-hero-detail',
@@ -26,6 +30,11 @@ export class HeroDetailComponent implements OnInit {
     this.heroService.getHero(+id).subscribe((hero: Hero) => {
       this.hero = hero;
     });
+  }
+
+  save() {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.onBack());
   }
 
   onBack(): void {

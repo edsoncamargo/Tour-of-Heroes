@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 text-center">
-      <h3>TOP HEROES</h3>
+    <div class="card pd10">
+      <label for="">Search hero by name</label>
+      <input #searchBox (input)="search(searchBox.value)" type="text" class="form-control" placeholder="Hero name">
     </div>
-    <div *ngFor="let hero of heroes" class="card pointer-click">
+    <div *ngFor="let hero of heroes$ | async" class="card pointer-click">
       <div class="row" routerLink="/detail/{{hero.id}}">
         <div class="col-12 d-flex">
           <div class="id">
@@ -17,5 +18,3 @@
     </div>
   </div>
 </div>
-
-<app-hero-search></app-hero-search>

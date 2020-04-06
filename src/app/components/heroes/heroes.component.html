@@ -6,15 +6,25 @@
     <div *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}" (click)="onSelectHero(hero)"
       class="card pointer-click">
       <div class="row">
-        <div class="col-12 d-flex">
-          <div class="id">
-            <span> {{ hero.id }}</span>
+        <div class="col-12  d-flex justify-content-between">
+          <div class="d-flex">
+            <div class="id">
+              <span> {{ hero.id }}</span>
+            </div>
+            <div class="name">
+              <span>{{ hero.name }}</span>
+            </div>
           </div>
-          <div class="name">
-            <span>{{ hero.name }}</span>
-          </div>
+          <div (click)="delete(hero)" class="delete-symbol">&#10005;</div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card pd10">
+      <label for="">Name</label>
+      <input #heroName type="text" class="form-control" placeholder="Hero name">
+      <button (click)="add(heroName.value); heroName.value=''" class="btn blue mt25">ADD HERO</button>
     </div>
   </div>
 </div>
